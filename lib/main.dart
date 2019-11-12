@@ -48,7 +48,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- Future<String> ip;
+ String ip = 'Saeed';
  Future<String> _getIPAddress() {
  final url = 'https://httpbin.org/ip';
     return http.get(url).then((response) {
@@ -60,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      ip = ip;
+      this.ip = ip;
     });
     });
   }
