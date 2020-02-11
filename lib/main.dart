@@ -57,6 +57,10 @@ Future<List<Post>> post;
     post = fetchPost();
   }
 
+  handlePressed(body) {
+    print('Flutter!'+body);
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -89,9 +93,7 @@ Future<List<Post>> post;
             children: <Widget>[
               FlatButton(
                 child: const Text('DELETE'),
-                onPressed: () {
-                  print('Flutter!');
-                 },
+                onPressed: () => handlePressed(post.body),
               )
             ],
           ),
